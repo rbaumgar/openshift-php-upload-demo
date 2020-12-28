@@ -12,8 +12,9 @@ $upload_dir = "uploaded/";
 $filename		= $upload_dir . basename($_FILES["fto"]["name"]);
 $uploadValid = 1;
 
-if ($_FILES["fto"]["size"] > 204800000) {
-	echo "Your file is too large. Please upload a file that is smaller than 20MB.";
+if ($_FILES["fto"]["size"] > 2048000000) {
+	echo "Your file is too large. Please upload a file that is smaller than 2GB.";
+	echo "Size: $_FILES["fto"]["size"]";
 	echo '<a href="./index.php">Home Page</a><br>';
 	$uploadValid = 0;
 
