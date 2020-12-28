@@ -14,7 +14,7 @@ $uploadValid = 1;
 
 if ($_FILES["fto"]["size"] > 2048000000) {
 	echo "Your file is too large. Please upload a file that is smaller than 2GB.";
-	echo "Size: $_FILES["fto"]["size"]";
+	echo "Size: " . ($_FILES["fto"]["size"]) . "Byte";
 	echo '<a href="./index.php">Home Page</a><br>';
 	$uploadValid = 0;
 
